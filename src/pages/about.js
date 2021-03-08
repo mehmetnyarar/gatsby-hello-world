@@ -1,6 +1,6 @@
 import React from "react"
-import Container from "../components/container"
 import Header from "../components/header"
+import Layout from "../components/layout"
 import { User } from "../components/user"
 
 const users = [
@@ -22,13 +22,15 @@ const users = [
 
 export default function About() {
   return (
-    <Container style={{ color: `teal` }}>
-      <Header headerText="About Gatsby" />
-      <p>Such wow. Very React.</p>
-      <p>CSS Modules are cool.</p>
+    <Layout>
+      <Header headerText="About me" />
+      <p>
+        I’m good enough, I’m smart enough, and gosh darn it, people like me!
+      </p>
+      <hr />
       {users.map(user => (
         <User key={user.username} {...user} />
       ))}
-    </Container>
+    </Layout>
   )
 }

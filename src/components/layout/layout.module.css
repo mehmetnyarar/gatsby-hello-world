@@ -1,0 +1,39 @@
+.layout {
+  margin: 3rem auto;
+  max-width: 650px;
+  padding: 0 1rem;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.homeLink {
+  text-shadow: none;
+  background-image: none;
+}
+
+.homeLinkHeader {
+  display: inline;
+}
+
+.nav {
+  list-style: none;
+}
+
+.navLink {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  margin: 3rem auto;
+  font-size: smaller;
+}
