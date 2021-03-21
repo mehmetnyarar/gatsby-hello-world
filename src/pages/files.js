@@ -4,7 +4,7 @@ import Header from "../components/header"
 import Layout from "../components/layout"
 
 const truncate = (text, size = 20) =>
-  text.length > size ? `${text.slice(0, size - 3)}` : text
+  text.length > size ? `${text.slice(0, size - 3)}...` : text
 
 export default function Files({ data }) {
   return (
