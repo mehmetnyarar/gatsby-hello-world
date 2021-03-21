@@ -3,7 +3,6 @@ import { graphql, Link, useStaticQuery } from "gatsby"
 import * as styles from "./layout.module.css"
 
 const links = [
-  { to: "/", title: "Home" },
   { to: "/blog", title: "Blog" },
   { to: "/files", title: "Files" },
   { to: "/pandas", title: "Pandas" },
