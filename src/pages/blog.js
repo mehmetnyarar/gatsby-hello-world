@@ -1,8 +1,8 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { css } from "@emotion/react"
-import Layout from "../../components/layout"
-import { rhythm } from "../../utils/typography"
+import Layout from "../components/layout"
+import { rhythm } from "../utils/typography"
 
 export default function Blog({ data }) {
   const posts = data.allMarkdownRemark.edges
@@ -29,7 +29,9 @@ export default function Blog({ data }) {
               align-items: baseline;
             `}
           >
-            <h2>{node.frontmatter.title}</h2>
+            <Link to={node.fields.slug}>
+              <h2>{node.frontmatter.title}</h2>
+            </Link>
             <span
               css={css`
                 color: grey;
@@ -54,6 +56,9 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+          }
+          fields {
+            slug
           }
           excerpt
         }
